@@ -172,7 +172,6 @@ def turn(board):
             board[row][column] = "-"
 
 place_ships(COMPUTER_BOARD)
-print_board(COMPUTER_BOARD)
 print_board(PLAYER_BOARD)
 place_ships(PLAYER_BOARD)
 
