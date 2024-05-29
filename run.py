@@ -133,11 +133,48 @@ def user_input(place_ship):
                 print('Enter a valid letter between A-H')
         return row, column  
 
-def count_hit_ships():
-    pass
+"""
+Counter that loops through board to see how many Xs there are i.e. how many ships have been hit. Increase counter by 1 each time a ship(X) is found.
+"""
+def count_hit_ships(board):
+    count = 0
+    for row in board:
+        for column in row:
+            if column == "X":
+                count += 1
+    return count
 
+"""
+User's and Computer's turns. Checks if area has been selected, hit ot missed before.
+"""
 def turn(board):
-    pass
+    #player turns
+    if board == PLAYER_GUESS_BOARD:
+        row, column = user_input(PLAYER_GUESS_BOARD)
+        if board[row][column] == "-":
+            turn(board)
+        elif board[row][column] == "X":
+            turn(board)
+        elif COMPUTER_BOARD[row][column] == "X":
+            board[row][column] = "X"
+        else:
+            board[row][column] = "-"
+    #computer turns        
+    else:
+        row, column = random.randint(0,7), random.randint(0,7)
+        if board[row][column] == "-":
+            turn(board)
+        elif board[row][column] == "X":
+            turn(board)
+        elif PLAYER_BOARD[row][column] == "X":
+            board[row][column] = "X"
+        else:
+            board[row][column] = "-"
+
+place_ships(COMPUTER_BOARD)
+print_board(COMPUTER_BOARD)
+print_board(PLAYER_BOARD)
+place_ships(PLAYER_BOARD)
 
 #while True:
 
