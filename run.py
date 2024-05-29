@@ -176,5 +176,21 @@ print_board(COMPUTER_BOARD)
 print_board(PLAYER_BOARD)
 place_ships(PLAYER_BOARD)
 
-#while True:
-
+while True:
+    #player turn
+    while True:
+        print('Guess a battleship location')
+        print_board(PLAYER_GUESS_BOARD)
+        turn(PLAYER_GUESS_BOARD)
+        break
+    if count_hit_ships(PLAYER_GUESS_BOARD) == 17:
+        print("Woooo! You win!")
+        break   
+    #computer turn
+    while True:
+        turn(COMPUTER_GUESS_BOARD)
+        break           
+    print_board(COMPUTER_GUESS_BOARD)   
+    if count_hit_ships(COMPUTER_GUESS_BOARD) == 17:
+        print("Yikes! The computer wins!")
+        break
