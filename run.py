@@ -17,6 +17,7 @@ LETTERS_TO_NUMBERS = {
 }
 
 
+
 def print_board(board):
     print("***********************************")
     print("******Welcome to Battleships!******")
@@ -130,46 +131,37 @@ and ensure input of valid characters
 def user_input(place_ship):
     if place_ship == True:
         while True:
-            try:
                 orientation = input("Enter orientation (H or V): \n").upper()
                 if orientation == "H" or orientation == "V":
                     break
-            except TypeError:
-                print("Enter a valid orientation H or V")
+                else: 
+                    print("Enter a valid orientation H or V")
         while True:
-            try:
                 row = input("Enter the row 1-8 of the ship: \n")
                 if row in "12345678":
                     row = int(row) - 1
                     break
-            except ValueError:
                 print("Enter a valid letter between 1-8")
         while True:
-            try:
                 column = input("Enter the column of the ship: \n").upper()
                 if column in "ABCDEFGH":
                     column = LETTERS_TO_NUMBERS[column]
                     break
-            except KeyError:
                 print("Enter a valid letter between A-H")
         return row, column, orientation
     else:
         # Don't need to know V or H when user is guessing.
         while True:
-            try:
                 row = input("Enter the row 1-8 of the ship: \n")
                 if row in "12345678":
                     row = int(row) - 1
                     break
-            except ValueError:
                 print("Enter a valid letter between 1-8")
         while True:
-            try:
                 column = input("Enter the column of the ship: \n").upper()
                 if column in "ABCDEFGH":
                     column = LETTERS_TO_NUMBERS[column]
                     break
-            except KeyError:
                 print("Enter a valid letter between A-H")
         return row, column
 
