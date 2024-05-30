@@ -5,7 +5,16 @@ PLAYER_BOARD = [[" "] * 8 for i in range(8)]
 COMPUTER_BOARD = [[" "] * 8 for i in range(8)]
 PLAYER_GUESS_BOARD = [[" "] * 8 for i in range(8)]
 COMPUTER_GUESS_BOARD = [[" "] * 8 for i in range(8)]
-LETTERS_TO_NUMBERS = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
+LETTERS_TO_NUMBERS = {
+    "A": 0,
+    "B": 1,
+    "C": 2,
+    "D": 3,
+    "E": 4,
+    "F": 5,
+    "G": 6,
+    "H": 7
+}
 
 
 def print_board(board):
@@ -24,14 +33,16 @@ def print_board(board):
 
 
 """
-Places ships on computer board. Will loop through function until all five ships have been placed.
+Places ships on computer board.
+Will loop through function until all five ships have been placed.
 """
 
 
 def place_ships(board):
     # loop through length of ships
     for ship_length in LENGTH_OF_SHIPS:
-        # loop until ship fits on the board, doesn't overlap and doesn't spill over edges
+        # loop until ship fits on the board.
+        # Doesn't overlap and doesn't spill over edges
         while True:
             if board == COMPUTER_BOARD:
                 # H is for horizontal. V is for vertical.
@@ -111,7 +122,8 @@ def ship_overlaps(board, row, column, orientation, ship_length):
 
 
 """
-Prompt user to input their choices to place their ships and ensure input of valid characters
+Prompt user to input their choices to place their ships
+and ensure input of valid characters
 """
 
 
@@ -163,10 +175,10 @@ def user_input(place_ship):
 
 
 """
-Counter that loops through board to see how many Xs there are i.e. how many ships have been hit. Increase counter by 1 each time a ship(X) is found.
+Counter that loops through board to see how many Xs there are
+i.e. how many ships have been hit.
+Increase counter by 1 each time a ship(X) is found.
 """
-
-
 def count_hit_ships(board):
     count = 0
     for row in board:
@@ -177,10 +189,9 @@ def count_hit_ships(board):
 
 
 """
-User's and Computer's turns. Checks if area has been selected, hit ot missed before.
+User's and Computer's turns.
+Checks if area has been selected, hit or missed before.
 """
-
-
 def turn(board):
     # player turns
     if board == PLAYER_GUESS_BOARD:
