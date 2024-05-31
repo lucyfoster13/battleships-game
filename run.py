@@ -140,7 +140,7 @@ def user_input(place_ship):
             if row in "12345678":
                 row = int(row) - 1
                 break
-            print("Enter a valid letter between 1-8")
+            print("Enter a valid number between 1-8")
         while True:
             column = input("Enter the column of the ship: \n").upper()
             if column in "ABCDEFGH":
@@ -183,7 +183,6 @@ def count_hit_ships(board):
 
 """
 User's and Computer's turns.
-Checks if area has been selected, hit or missed before.
 """
 
 

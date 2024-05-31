@@ -67,6 +67,14 @@ On completion of the game, the user is notififed if they have won or lost and is
 Extensive manual testing was carried to ensure the controls worked as intended and the game didn't crash in any cases of invalid input.
 The game performed as expected. In the earlier iterations of the game, I had the error notifications inside a try except block which did not work. I fixed this error by converting to a simple if else block.
 
+| Feature tested                                          | Expected outcome                                                                                                                                      | Actual outcome |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| 'H' or 'V' not entered for orientation prompt.          | The message appears: "Enter a valid orientation H or V"                                                                                               | As expected.   |
+| Number 1-8 not entered for row prompt.                  | The message appears: "Enter a valid number between 1-8"                                                                                               | As expected.   |
+| Letter A-H not entered for column prompt.               | The message appears: "Enter a valid letter between A-H"                                                                                               | As expected.   |
+| User sinks computer's battleships first.                | The message appears: "Woooo! You win!"                                                                                                                | As expected.   |
+| Computer sinks user's battleships first.                | The message appears: "Yikes! The computer win                                                                                                         | As expected.   |
+
 ### Python Validation
 
 I validated my run.py file using [Code Institute's Python Linter](https://pep8ci.herokuapp.com/#).
