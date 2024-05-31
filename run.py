@@ -14,8 +14,7 @@ LETTERS_TO_NUMBERS = {
     "F": 5,
     "G": 6,
     "H": 7
-}
-
+    }
 
 
 def print_board(board):
@@ -56,7 +55,7 @@ def place_ships(board):
                     # check if ship overlaps
                     if (
                         ship_overlaps(board, row, column, orientation, ship_length)
-                        == False
+                        is False
                     ):
                         # place ship
                         if orientation == "H":
@@ -74,7 +73,7 @@ def place_ships(board):
                     # check if ship overlaps
                     if (
                         ship_overlaps(board, row, column, orientation, ship_length)
-                        == False
+                        is False
                     ):
                         # place ship
                         if orientation == "H":
@@ -129,40 +128,40 @@ and ensure input of valid characters
 
 
 def user_input(place_ship):
-    if place_ship == True:
+    if place_ship is True:
         while True:
-                orientation = input("Enter orientation (H or V): \n").upper()
-                if orientation == "H" or orientation == "V":
-                    break
-                else: 
-                    print("Enter a valid orientation H or V")
+            orientation = input("Enter orientation (H or V): \n").upper()
+            if orientation == "H" or orientation == "V":
+                break
+            else:
+                print("Enter a valid orientation H or V")
         while True:
-                row = input("Enter the row 1-8 of the ship: \n")
-                if row in "12345678":
-                    row = int(row) - 1
-                    break
-                print("Enter a valid letter between 1-8")
+            row = input("Enter the row 1-8 of the ship: \n")
+            if row in "12345678":
+                row = int(row) - 1
+                break
+            print("Enter a valid letter between 1-8")
         while True:
-                column = input("Enter the column of the ship: \n").upper()
-                if column in "ABCDEFGH":
-                    column = LETTERS_TO_NUMBERS[column]
-                    break
-                print("Enter a valid letter between A-H")
+            column = input("Enter the column of the ship: \n").upper()
+            if column in "ABCDEFGH":
+                column = LETTERS_TO_NUMBERS[column]
+                break
+            print("Enter a valid letter between A-H")
         return row, column, orientation
     else:
         # Don't need to know V or H when user is guessing.
         while True:
-                row = input("Enter the row 1-8 of the ship: \n")
-                if row in "12345678":
-                    row = int(row) - 1
-                    break
-                print("Enter a valid letter between 1-8")
+            row = input("Enter the row 1-8 of the ship: \n")
+            if row in "12345678":
+                row = int(row) - 1
+                break
+            print("Enter a valid letter between 1-8")
         while True:
-                column = input("Enter the column of the ship: \n").upper()
-                if column in "ABCDEFGH":
-                    column = LETTERS_TO_NUMBERS[column]
-                    break
-                print("Enter a valid letter between A-H")
+            column = input("Enter the column of the ship: \n").upper()
+            if column in "ABCDEFGH":
+                column = LETTERS_TO_NUMBERS[column]
+                break
+            print("Enter a valid letter between A-H")
         return row, column
 
 
@@ -171,6 +170,8 @@ Counter that loops through board to see how many Xs there are
 i.e. how many ships have been hit.
 Increase counter by 1 each time a ship(X) is found.
 """
+
+
 def count_hit_ships(board):
     count = 0
     for row in board:
@@ -184,6 +185,8 @@ def count_hit_ships(board):
 User's and Computer's turns.
 Checks if area has been selected, hit or missed before.
 """
+
+
 def turn(board):
     # player turns
     if board == PLAYER_GUESS_BOARD:
