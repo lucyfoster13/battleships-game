@@ -136,4 +136,4 @@ The project will have been cloned on your local machine and be ready to use.
 
 ## Credits
 
-I watched a number of walkthrough videos on Youtube to get a sense of the layout and structure of the game, such as this series by [Knowledge Mavens](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=1440s). These videos were very helpful for helping me understand the logic of the code but had a number of syntax errors and Python convention conflicts that I amended to comply with the learning on the course.
+I watched a number of walkthrough videos on Youtube to get a sense of the layout and structure of the game, such as this series by [Knowledge Mavens](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=1440s). These videos were great for helping me understand the logic and structure of the code but had a number of syntax errors and Python convention conflicts that I amended to comply with the learning on the course.
