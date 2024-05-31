@@ -3,6 +3,8 @@
 Battleships is a popular, strategy-type guessing game. It is known worldwide as a pencil and paper game, which dates from World War I. It was published by various companies as a pad-and-pencil game in the 1930s and was released as a plastic board game by Milton Bradley in 1967. The game now also has many electronic versions as video games and mobile apps. 
 Play the game [here](https://lucys-battleships-74c7927432db.herokuapp.com/)
 
+![Game](readme_images/orientation_prompt.jpg)
+
 ## Project Goals
 
 The goal of Battleships is to entertain the player and provide them with an engaging gameplay experience. Battleships is a well-known and loved game where the player must try to sink their opponent's battleships first. In this case, the user will play against the computer and their randomly generated board of five ships.
@@ -43,22 +45,19 @@ Due to this program being built for terminal use, there was not much design. I u
 
 The player is presented with a welcome screen giving them details of the game.
 
-![Welcome](readme_images/welcome.png)
+![Welcome](readme_images/orientation_prompt.jpg)
 
 ### Game
 
 The user is prompted to start placing their ships on their board. Input validation is implemented in the code to ensure there are no errors and the board is setup correctly.
 The user is then prompted to start guessing their opponent's placements. As before, if they guess a row or column outside of the designated scope, or something they have already guessed,they will be alerted and prompted to re-enter the selection.
 
-![Game](readme_images/game.png)
+![Game](readme_images/row_prompt.jpg)
+![Game](readme_images/column.jpg)
 
 ### Finish game
 
 On completion of the game, the user is notififed if they have won or lost and is given the option to play again.
-
-![Win](readme_images/win.png)
-
-![Finish](readme_images/game_over.png)
 
 ## Testing
 
@@ -79,7 +78,7 @@ The game performed as expected. In the earlier iterations of the game, I had the
 
 I validated my run.py file using [Code Institute's Python Linter](https://pep8ci.herokuapp.com/#).
 
-![Validator](readme_images/validator.png)
+![Validator](readme_images/Python_Linter.jpg)
 
 ### Bugs
 
